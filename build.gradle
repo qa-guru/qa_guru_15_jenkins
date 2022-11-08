@@ -57,8 +57,14 @@ task few_property(type: Test){
     }
 }
 
-task hello_property(type: Test){
-    useJUnitPlatform(){
+task hello_property(type: Test) {
+    useJUnitPlatform() {
         includeTags "hello_test"
+    }
+}
+
+task registration_form_property(type: Test) {
+    useJUnitPlatform() {
+        includeTags "registration_form_test"
     }
 }

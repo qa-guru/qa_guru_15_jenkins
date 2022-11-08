@@ -45,12 +45,12 @@ public class SystemPropertiesTests {
     @Test
     @Tag("few_property_test")
     void simplePropertyTest6(){
-        String browserName = System.getProperty("browser", "firefox");
-        String browserVersion = System.getProperty("version", "105");
-        String browserSize = System.getProperty("size", "1920x1080");
-        System.out.println(browserName);
-        System.out.println(browserVersion);
-        System.out.println(browserSize);
+        String browser = System.getProperty("browser", "firefox");
+        String version = System.getProperty("version", "105");
+        String size = System.getProperty("size", "1920x1080");
+        System.out.println(browser);
+        System.out.println(version);
+        System.out.println(size);
         //gradle clean few_property -Dbrowser=safari -Dversion=99.1 -Dsize=500x500
         //safari
         //99.1
