@@ -3,7 +3,6 @@ package tests.properties;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLOutput;
 
 public class SystemPropertiesTests {
     @Test
@@ -36,8 +35,33 @@ public class SystemPropertiesTests {
     @Test
     @Tag("one_property_test")
     void simplePropertyTest5(){
-        System.setProperty("browser", "opera");
+        //System.setProperty("browser", "opera");
         String browserName = System.getProperty("browser", "firefox");
         System.out.println(browserName);
+        //gradle clean one_property -Dbrowser=safari
+        //safari
+    }
+
+    @Test
+    @Tag("few_property_test")
+    void simplePropertyTest6(){
+        String browserName = System.getProperty("browser", "firefox");
+        String browserVersion = System.getProperty("version", "105");
+        String browserSize = System.getProperty("size", "1920x1080");
+        System.out.println(browserName);
+        System.out.println(browserVersion);
+        System.out.println(browserSize);
+        //gradle clean few_property -Dbrowser=safari -Dversion=99.1 -Dsize=500x500
+        //safari
+        //99.1
+        //500x500
+    }
+
+    @Test
+    @Tag("hello_test")
+    void simplePropertyTest7(){
+        System.out.println("Hello and GoodBy " + System.getProperty("user_name", "Liloops") + "!!!");
+        //gradle clean hello_property -Duser_name=Qiwi
+        //Hello and GoodBy Qiwi!!!
     }
 }
