@@ -1,17 +1,9 @@
 package tests.demoqa;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
-import static io.qameta.allure.Allure.step;
 
-@Disabled
 public class SystemPropertiesTests {
     @Test
     void simplePropertyTest1(){
