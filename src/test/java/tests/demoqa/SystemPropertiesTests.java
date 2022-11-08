@@ -60,7 +60,7 @@ public class SystemPropertiesTests {
     @Test
     @Tag("hello_test")
     void simplePropertyTest7(){
-        System.out.println("Hello and GoodBy " + System.getProperty("user_name", "Liloops") + "!!!");
+        System.out.println("Hello and GoodBy " + System.getProperty("userName", "Liloops") + "!!!");
         //gradle clean hello_property -Duser_name=Qiwi
         //Hello and GoodBy Qiwi!!!
     }
