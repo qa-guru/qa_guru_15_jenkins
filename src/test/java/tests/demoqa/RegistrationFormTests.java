@@ -46,6 +46,5 @@ public class RegistrationFormTests extends TestBase {
             $(".table-responsive table").shouldHave(text("Alex"), text("Egorov"),
                     text("alex@egorov.com"), text("1234567890"));
         });
-
     }
 }
