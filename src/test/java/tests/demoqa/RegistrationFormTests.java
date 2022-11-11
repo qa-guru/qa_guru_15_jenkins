@@ -1,5 +1,6 @@
 package tests.demoqa;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.appear;
@@ -10,6 +11,7 @@ import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormTests extends TestBase {
     @Test
+    @Tag("registration_form_test")
     void fillFormTest() {
         step("Open registrations form", () -> {
             open("/automation-practice-form");
@@ -44,6 +46,5 @@ public class RegistrationFormTests extends TestBase {
             $(".table-responsive table").shouldHave(text("Alex"), text("Egorov"),
                     text("alex@egorov.com"), text("1234567890"));
         });
-
     }
 }

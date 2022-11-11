@@ -1,0 +1,16 @@
+image: gradle:alpine
+
+default:
+  tags:
+    -shellocal
+
+stages:
+  -test
+
+UI tests with Allure:
+  stage: test
+    script:
+      - ./gralew clean test
+      - ./gralew allureReport
+    artifacts:
+      path: allure-report/*
